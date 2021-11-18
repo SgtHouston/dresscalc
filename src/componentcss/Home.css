@@ -1,0 +1,16 @@
+.CalcHome {
+    text-align: center;
+}
+
+.Calculator {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.CalcColLeft {
+    text-align: center;
+}
+
+.CalcColRight{
+    text-align: center;
+}
