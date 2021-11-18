@@ -17,6 +17,13 @@ function Home() {
                 </div>
                 <div className="CalcColRight">
                     Right
+                    <p className="Labor">Total Labor Costs</p>
+                    <p className="Material">Total Material Costs</p>
+                    <p className="Fees">Fees</p>
+                    <p className="WholesaleProm">Wholesale Price --- Prom Event</p>
+                    <p className="WholesaleBridal">Wholesale Price --- Bridal Event</p>
+                    <p className="RetailProm">Retail Price --- Prom Event</p>
+                    <p className="RetailBridal">Retail Price --- Bridal Event</p>
                 </div>
             </div>
         </div>
