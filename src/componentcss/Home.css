@@ -16,3 +16,17 @@
     text-align: center;
     flex: 0.3;
 }
+
+.VariableMaterials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.VMTitle {
+    display: flex;
+}
+
+.Input {
+    max-width:3rem;
+}
