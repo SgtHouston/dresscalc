@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../componentcss/Home.css'
-import { db } from '../db.js'
 // npm install react-bootstrap@next bootstrap@5.1.1
-import { Table } from 'react-bootstrap'
 import VariableMaterials from './VariableMaterials'
-import { useSelector } from 'react-redux'
-
-
-
+import MaintenanceFees from './MaintenanceFees'
 
 function Home() {
 
@@ -65,7 +60,9 @@ function Home() {
                     <div className="CalcColLeft">
                         Left
                         <VariableMaterials className="VariableMaterials" />
-                        <div className="MaintenanceFees">2</div>
+                        <br/>
+                        <br/>
+                        <MaintenanceFees className="MaintenanceFees" />
                         <div className="LaborHours">3</div>
                         <div className="Packaging">4</div>
                         <div className="Fees">5</div>
@@ -73,7 +70,7 @@ function Home() {
                     </div>
                     <div className="CalcColRight">
                         Right
-                        <p className="Labor">Total Labor Costs</p>
+                        <p className="Labor">Total Labor Costs </p>
                         <p className="Material">Total Material Costs</p>
                         <p className="FeesTotal">Total Fees</p>
                         <p className="WholesaleProm">Wholesale Price --- Prom Event</p>
