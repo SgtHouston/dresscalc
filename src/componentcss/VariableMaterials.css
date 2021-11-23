@@ -1,9 +1,13 @@
 .VMC-Input {
     max-width: 2rem;
+    min-width: 2rem;
 }
 
 tr :first-child {
     text-align: end;
-    
-    
+}
+
+tr :nth-child(2) {
+    text-align: center;
+
 }

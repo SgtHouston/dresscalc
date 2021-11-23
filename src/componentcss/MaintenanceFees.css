@@ -1,7 +1,5 @@
-tr :first-child {
-    text-align: end;
-}
 
 .Maint-Input {
     max-width: 2rem;
+    min-width: 2rem;
 }
