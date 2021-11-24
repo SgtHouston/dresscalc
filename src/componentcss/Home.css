@@ -1,21 +1,27 @@
 .CalcHome {
     font-size: 8pt;
+    font-weight: 900;
 }
 
 .Calculator {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .CalcColLeft {
     display: flex;
     flex-direction: column;
     flex: 0.6;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .CalcColRight{
-    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
     font-weight: 800;
+    align-items: center;
+    
 }
 

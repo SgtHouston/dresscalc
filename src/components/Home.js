@@ -3,6 +3,7 @@ import '../componentcss/Home.css'
 // npm install react-bootstrap@next bootstrap@5.1.1
 import VariableMaterials from './VariableMaterials'
 import MaintenanceFees from './MaintenanceFees'
+import LaborHours from './LaborHours'
 
 function Home() {
 
@@ -63,7 +64,9 @@ function Home() {
                         <br/>
                         <br/>
                         <MaintenanceFees className="MaintenanceFees" />
-                        <div className="LaborHours">3</div>
+                        <br/>
+                        <br/>
+                        <LaborHours className="LaborHours"/>
                         <div className="Packaging">4</div>
                         <div className="Fees">5</div>
                         <button type="submit" onClick={handleSubmit}>Submit</button>

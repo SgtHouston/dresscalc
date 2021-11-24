@@ -1,0 +1,8 @@
+/* tr :first-child {
+    text-align: end;
+} */
+
+.Labor-Input {
+    max-width: 2rem;
+    min-width: 2rem;
+}
