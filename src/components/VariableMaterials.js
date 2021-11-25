@@ -42,15 +42,17 @@ function VariableMaterials() {
             <Table className="table" >
                 <thead>
                     <tr>
-                        <th>YOU CAN READ AN EXPLANATION FOR EACH LINE BELOW</th>
-                        <th>PRICE or QTY</th>
-                        <th>VARIABLE MATERIALS COSTS</th>
+                        <th className="tableheader">YOU CAN READ AN EXPLANATION FOR EACH LINE BELOW</th>
+                        <br/>
+                        <th className="tableheader">PRICE or QTY</th>
+                        <th className="tableheader">VARIABLE MATERIALS COSTS</th>
                     </tr>
                 </thead>
 
                 <tbody >
                     <tr>
                         <td>How Much Does The Main Fabric Cost? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.MainFabricPPY} onChange={(e) => setVariableMaterials({ ...variableMaterials, MainFabricPPY: e.target.value })} id='MainFabricPPY' />
                         </td>
@@ -61,6 +63,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Yards Of This Fabric Will I Use? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumMainYds} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumMainYds: e.target.value })} id='NumMainYds' />
                         </td>
@@ -71,6 +74,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Does The Lining Fabric Cost Per Yard? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.LiningFabricPPY} onChange={(e) => setVariableMaterials({ ...variableMaterials, LiningFabricPPY: e.target.value })} id='LiningFabricPPY' />
                         </td>
@@ -81,6 +85,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Yards Of This Fabric Will I Use? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumLiningYds} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumLiningYds: e.target.value })} id='NumLiningYds' />
                         </td>
@@ -91,6 +96,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Does The Specialty Fabric Cost Per Yard? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.SpecialtyFabricPPY} onChange={(e) => setVariableMaterials({ ...variableMaterials, SpecialtyFabricPPY: e.target.value })} id='SpecialtyFabricPPY' />
                         </td>
@@ -101,6 +107,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Yards Of This Fabric Will I Use? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumSpecYds} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumSpecYds: e.target.value })} id='NumSpecYds' />
                         </td>
@@ -111,6 +118,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>What Is The Local Retail Price Of The Crystals Pkg? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.CrystalPPPkg} onChange={(e) => setVariableMaterials({ ...variableMaterials, CrystalPPPkg: e.target.value })} id='CrystalPPPkg' />
                         </td>
@@ -121,6 +129,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Required? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumCrystalPkg} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumCrystalPkg: e.target.value })} id='NumCrystalPkg' />
                         </td>
@@ -131,6 +140,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Does The Lace/Bead/Rhinestone Trim Costs Per Pkg? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.LaceBeadRhineTrim} onChange={(e) => setVariableMaterials({ ...variableMaterials, LaceBeadRhineTrim: e.target.value })} id='LaceBeadRhineTrim' />
                         </td>
@@ -141,6 +151,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Required? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumLaceBeadRhineTrim} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumLaceBeadRhineTrim: e.target.value })} id='NumLaceBeadRhineTrim' />
                         </td>
@@ -151,6 +162,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Do The Lace/Bead/Rhinestone Applique Costs Per Pkg? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.LaceBeadRhineApp} onChange={(e) => setVariableMaterials({ ...variableMaterials, LaceBeadRhineApp: e.target.value })} id='LaceBeadRhineApp' />
                         </td>
@@ -161,6 +173,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumLaceBeadRhineApp} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumLaceBeadRhineApp: e.target.value })} id='NumLaceBeadRhineApp' />
                         </td>
@@ -171,6 +184,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Do The Zippers/Buttons/Fasteners/Hooks Cost Per Pkg? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.ZipperButtonHook} onChange={(e) => setVariableMaterials({ ...variableMaterials, ZipperButtonHook: e.target.value })} id='ZipperButtonHook' />
                         </td>
@@ -181,6 +195,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumZipperButtonHook} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumZipperButtonHook: e.target.value })} id='NumZipperButtonHook' />
                         </td>
@@ -191,6 +206,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.Horsehair} onChange={(e) => setVariableMaterials({ ...variableMaterials, Horsehair: e.target.value })} id='Horsehair' />
                         </td>
@@ -201,6 +217,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumHorsehair} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumHorsehair: e.target.value })} id='NumHorsehair' />
                         </td>
@@ -211,6 +228,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.Thread} onChange={(e) => setVariableMaterials({ ...variableMaterials, Thread: e.target.value })} id='Thread' />
                         </td>
@@ -221,6 +239,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumThread} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumThread: e.target.value })} id='NumThread' />
                         </td>
@@ -231,6 +250,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.Embellishment1} onChange={(e) => setVariableMaterials({ ...variableMaterials, Embellishment1: e.target.value })} id='Embellishment1' />
                         </td>
@@ -241,6 +261,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumEmbellishment1} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumEmbellishment1: e.target.value })} id='NumEmbellishment1' />
                         </td>
@@ -251,6 +272,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.Embellishment2} onChange={(e) => setVariableMaterials({ ...variableMaterials, Embellishment2: e.target.value })} id='Embellishment2' />
                         </td>
@@ -261,6 +283,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumEmbellishment2} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumEmbellishment2: e.target.value })} id='NumEmbellishment2' />
                         </td>
@@ -271,6 +294,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.Embellishment3} onChange={(e) => setVariableMaterials({ ...variableMaterials, Embellishment3: e.target.value })} id='Embellishment3' />
                         </td>
@@ -281,6 +305,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Packages At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumEmbellishment3} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumEmbellishment3: e.target.value })} id='NumEmbellishment3' />
                         </td>
@@ -291,6 +316,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.HangTag} onChange={(e) => setVariableMaterials({ ...variableMaterials, HangTag: e.target.value })} id='HangTag' />
                         </td>
@@ -301,6 +327,7 @@ function VariableMaterials() {
                 <tbody >
                     <tr>
                         <td>How Many Hang Tags At Retail Are Req? ---{'>'}</td>
+                        <br/>
                         <td>
                             <input className="VMC-Input" value={variableMaterials.NumHangTag} onChange={(e) => setVariableMaterials({ ...variableMaterials, NumHangTag: e.target.value })} id='NumHangTag' />
                         </td>

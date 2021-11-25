@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../componentcss/Home.css'
 // npm install react-bootstrap@next bootstrap@5.1.1
 import VariableMaterials from './VariableMaterials'
 import MaintenanceFees from './MaintenanceFees'
 import LaborHours from './LaborHours'
+import Packaging from './Packaging'
+import Fees from './Fees'
 
 function Home() {
 
@@ -12,37 +14,8 @@ function Home() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        // setVariableMaterials({
-        //     ...variableMaterials,
-        //     MainFabricPPY: variableMaterials.MainFabricPPY,
-        //     NumMainYds: variableMaterials.NumMainYds,
-        //     LiningFabricPPY: variableMaterials.LiningFabricPPY,
-        //     NumLiningYds: variableMaterials.NumLiningYds,
-        //     SpecialtyFabricPPY: variableMaterials.SpecialtyFabricPPY,
-        //     NumSpecYds: variableMaterials.NumSpecYds,
-        //     CrystalPPPkg: variableMaterials.CrystalPPPkg,
-        //     NumCrystalPkg: variableMaterials.NumCrystalPkg,
-        //     LaceBeadRhineTrim: variableMaterials.LaceBeadRhineTrim,
-        //     NumLaceBeadRhineTrim: variableMaterials.NumLaceBeadRhineTrim,
-        //     LaceBeadRhineApp: variableMaterials.LaceBeadRhineApp,
-        //     NumLaceBeadRhineApp: variableMaterials.NumLaceBeadRhineApp,
-        //     ZipperButtonHook: variableMaterials.ZipperButtonHook,
-        //     NumZipperButtonHook: variableMaterials.NumZipperButtonHook,
-        //     Horsehair: variableMaterials.Horsehair,
-        //     NumHorsehair: variableMaterials.NumHorsehair,
-        //     Thread: variableMaterials.Thread,
-        //     NumThread: variableMaterials.NumThread,
-        //     Embellishment1: variableMaterials.Embellishment1,
-        //     NumEmbellishment1: variableMaterials.NumEmbellishment1,
-        //     Embellishment2: variableMaterials.Embellishment2,
-        //     NumEmbellishment2: variableMaterials.NumEmbellishment2,
-        //     Embellishment3: variableMaterials.Embellishment3,
-        //     NumEmbellishment3: variableMaterials.NumEmbellishment3,
-        //     HangTag: variableMaterials.HangTag,
-        //     NumHangTag: variableMaterials.NumHangTag
-        // })
-
-        // console.log("Here is the variableMaterials", variableMaterials)
+        
+        
 
     }
 
@@ -67,8 +40,14 @@ function Home() {
                         <br/>
                         <br/>
                         <LaborHours className="LaborHours"/>
-                        <div className="Packaging">4</div>
-                        <div className="Fees">5</div>
+                        <br/>
+                        <br/>
+                        <Packaging className="Packaging"/>
+                        <br/>
+                        <br/>
+                        <Fees className="Fees"/>
+                        <br/>
+                        <br/>
                         <button type="submit" onClick={handleSubmit}>Submit</button>
                     </div>
                     <div className="CalcColRight">
