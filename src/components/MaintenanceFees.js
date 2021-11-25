@@ -13,15 +13,17 @@ function MaintenanceFees() {
         <Table className="table">
             <thead>
                 <tr>
-                    <th>YOU CAN READ AN EXPLANATION FOR EACH LINE BELOW</th>
-                    <th>PRICE</th>
-                    <th>MAINTENANCE FEES</th>
+                    <th className="tableheader">YOU CAN READ AN EXPLANATION FOR EACH LINE BELOW</th>
+                    <br/>
+                    <th className="tableheader">PRICE</th>
+                    <th className="tableheader">MAINTENANCE FEES</th>
                 </tr>
             </thead>
 
             <tbody >
                 <tr>
                     <td>Charged For Sewing Machine Maintenance Over Time ---{'>'}</td>
+                    <br/>
                     <td>
                         <input className="Maint-Input" value={maintFees.SewingMachineMaintFee} onChange={(e) => setMaintFees({ ...maintFees, SewingMachineMaintFee: e.target.value })} id='SewingMachineMaintFee' />
                     </td>
@@ -32,10 +34,11 @@ function MaintenanceFees() {
             <tbody >
                 <tr>
                     <td>Charged For Cleanup and Disposal of Scrap Materials ---{'>'}</td>
+                    <br/>
                     <td>
                         <input className="Maint-Input" value={maintFees.ShopMaintUtilFee} onChange={(e) => setMaintFees({ ...maintFees, ShopMaintUtilFee: e.target.value })} id='ShopMaintUtilFee' />
                     </td>
-                    <td>Shop Maintenance & Utilties Fee</td>
+                    <td>Shop Maintenance & Util. Fee</td>
                 </tr>
             </tbody>
         </Table>
