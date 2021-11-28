@@ -25,7 +25,7 @@ function MaintenanceFees() {
                     <td>Charged For Sewing Machine Maintenance Over Time ---{'>'}</td>
                     <br/>
                     <td>
-                        <input className="Maint-Input" value={maintFees.SewingMachineMaintFee} onChange={(e) => setMaintFees({ ...maintFees, SewingMachineMaintFee: e.target.value })} id='SewingMachineMaintFee' />
+                        $ <input className="Maint-Input" value={maintFees.SewingMachineMaintFee} onChange={(e) => setMaintFees({ ...maintFees, SewingMachineMaintFee: e.target.value })} id='SewingMachineMaintFee' />
                     </td>
                     <td>Sewing Machine Fee</td>
                 </tr>
@@ -36,7 +36,7 @@ function MaintenanceFees() {
                     <td>Charged For Cleanup and Disposal of Scrap Materials ---{'>'}</td>
                     <br/>
                     <td>
-                        <input className="Maint-Input" value={maintFees.ShopMaintUtilFee} onChange={(e) => setMaintFees({ ...maintFees, ShopMaintUtilFee: e.target.value })} id='ShopMaintUtilFee' />
+                        $ <input className="Maint-Input" value={maintFees.ShopMaintUtilFee} onChange={(e) => setMaintFees({ ...maintFees, ShopMaintUtilFee: e.target.value })} id='ShopMaintUtilFee' />
                     </td>
                     <td>Shop Maintenance & Util. Fee</td>
                 </tr>

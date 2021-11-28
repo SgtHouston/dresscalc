@@ -15,7 +15,7 @@ function Fees() {
                 <tr>
                     <th className="tableheader">YOU CAN READ AN EXPLANATION FOR EACH LINE BELOW</th>
                     <br/>
-                    <th className="tableheader">fees</th>
+                    <th className="tableheader">FEES</th>
                 </tr>
             </thead>
 
