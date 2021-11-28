@@ -25,7 +25,7 @@ function Packaging() {
                     <td>How Much Are The SLR Couture Garment Bags? ---{'>'}</td>
                     <br/>
                     <td>
-                        <input className="Packaging-Input" value={packaging.GarmentBags} onChange={(e) => setPackaging({ ...packaging, GarmentBags: e.target.value })} id='GarmentBags' />
+                        $ <input className="Packaging-Input" value={packaging.GarmentBags} onChange={(e) => setPackaging({ ...packaging, GarmentBags: e.target.value })} id='GarmentBags' />
                     </td>
                     <td>Garment Bags</td>
                 </tr>
@@ -36,7 +36,7 @@ function Packaging() {
                     <td>Charged For Cleanup And Disposal Of Scrap Materials ---{'>'}</td>
                     <br/>
                     <td>
-                        <input className="Packaging-Input" value={packaging.TagsPinsBoxes} onChange={(e) => setPackaging({ ...packaging, TagsPinsBoxes: e.target.value })} id='TagsPinsBoxes' />
+                        $ <input className="Packaging-Input" value={packaging.TagsPinsBoxes} onChange={(e) => setPackaging({ ...packaging, TagsPinsBoxes: e.target.value })} id='TagsPinsBoxes' />
                     </td>
                     <td>Shop Maintenance & Util. Fee</td>
                 </tr>

@@ -32,11 +32,11 @@ function LaborHours() {
                     <td>How Many Hours Of Sewing Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.SewingHrs} onChange={(e) => setLaborHours({ ...laborHours, SewingHrs: e.target.value })} id='SewingHours' />
+                        <input className="Labor-Input" value={laborHours.SewingHrs} onChange={(e) => setLaborHours({ ...laborHours, SewingHrs: e.target.value })} id='SewingHours' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.SewingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: e.target.value })} id='SewingPriceHr' />
+                        <input className="Labor-Input" value={laborHours.SewingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: e.target.value })} id='SewingPriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
@@ -46,11 +46,11 @@ function LaborHours() {
                     <td>How Many Hours Of Pattern-Making Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.PatternHrs} onChange={(e) => setLaborHours({ ...laborHours, PatternHrs: e.target.value })} id='PatternHrs' />
+                        <input className="Labor-Input" value={laborHours.PatternHrs} onChange={(e) => setLaborHours({ ...laborHours, PatternHrs: e.target.value })} id='PatternHrs' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.PatternPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: e.target.value })} id='SewingPriceHr' />
+                        <input className="Labor-Input" value={laborHours.PatternPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: e.target.value })} id='SewingPriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
@@ -60,11 +60,11 @@ function LaborHours() {
                     <td>How Many Hours Of Cutting Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.CuttingHrs} onChange={(e) => setLaborHours({ ...laborHours, CuttingHrs: e.target.value })} id='CuttingHrs' />
+                        <input className="Labor-Input" value={laborHours.CuttingHrs} onChange={(e) => setLaborHours({ ...laborHours, CuttingHrs: e.target.value })} id='CuttingHrs' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.CutttingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, CutttingPriceHr: e.target.value })} id='CutttingPriceHr' />
+                        <input className="Labor-Input" value={laborHours.CutttingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, CutttingPriceHr: e.target.value })} id='CutttingPriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
@@ -74,11 +74,11 @@ function LaborHours() {
                     <td>How Many Hours Of Applique/Detail Work Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.AppliqueHrs} onChange={(e) => setLaborHours({ ...laborHours, AppliqueHrs: e.target.value })} id='AppliqueHrs' />
+                        <input className="Labor-Input" value={laborHours.AppliqueHrs} onChange={(e) => setLaborHours({ ...laborHours, AppliqueHrs: e.target.value })} id='AppliqueHrs' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.AppliquePriceHr} onChange={(e) => setLaborHours({ ...laborHours, AppliquePriceHr: e.target.value })} id='AppliquePriceHr' />
+                        <input className="Labor-Input" value={laborHours.AppliquePriceHr} onChange={(e) => setLaborHours({ ...laborHours, AppliquePriceHr: e.target.value })} id='AppliquePriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
