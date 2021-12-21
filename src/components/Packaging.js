@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Table } from 'react-bootstrap'
 import '../componentcss/Packaging.css'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { actionSetPackaging } from '../redux/action/packaging'
 
 function Packaging() {
 
-    const [packaging, setPackaging] = useState({
-        GarmentBags : 30,
-        TagsPinsBoxes : 30
-    })
+    const packaging = useSelector (state => state.packaging)
+    const dispatch = useDispatch()
 
+    function setPackaging(packaging) {
+        dispatch(actionSetPackaging(packaging))
+    }
     return (
         <Table className="table">
             <thead>
@@ -22,10 +26,10 @@ function Packaging() {
 
             <tbody >
                 <tr>
-                    <td>How Much Are The SLR Couture Garment Bags? ---{'>'}</td>
+                    <td>How Much Are The SLR Couture Garment Bags? ---{'>'} $</td>
                     <br/>
                     <td>
-                        $ <input className="Packaging-Input" value={packaging.GarmentBags} onChange={(e) => setPackaging({ ...packaging, GarmentBags: e.target.value })} id='GarmentBags' />
+                        <input className="Packaging-Input" value={packaging.GarmentBags} onChange={(e) => setPackaging({ ...packaging, GarmentBags: Number(e.target.value) })} id='GarmentBags' />
                     </td>
                     <td>Garment Bags</td>
                 </tr>
@@ -33,10 +37,10 @@ function Packaging() {
 
             <tbody >
                 <tr>
-                    <td>Charged For Cleanup And Disposal Of Scrap Materials ---{'>'}</td>
+                    <td>Charged For Cleanup And Disposal Of Scrap Materials ---{'>'} $</td>
                     <br/>
                     <td>
-                        $ <input className="Packaging-Input" value={packaging.TagsPinsBoxes} onChange={(e) => setPackaging({ ...packaging, TagsPinsBoxes: e.target.value })} id='TagsPinsBoxes' />
+                        <input className="Packaging-Input" value={packaging.TagsPinsBoxes} onChange={(e) => setPackaging({ ...packaging, TagsPinsBoxes: Number(e.target.value) })} id='TagsPinsBoxes' />
                     </td>
                     <td>Shop Maintenance & Util. Fee</td>
                 </tr>

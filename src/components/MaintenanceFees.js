@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Table } from 'react-bootstrap'
 import '../componentcss/MaintenanceFees.css'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { actionSetMaintenanceFees } from '../redux/action/maintenancefees'
 
 function MaintenanceFees() {
 
-    const [maintFees, setMaintFees] = useState({
-        SewingMachineMaintFee : 30,
-        ShopMaintUtilFee : 30
-    })
+    const maintFees = useSelector (state => state.maintenancefees)
+    const dispatch = useDispatch()
+    
+    function setMaintFees(maintFees) {
+        dispatch(actionSetMaintenanceFees(maintFees))
+    }
+
 
     return (
         <Table className="table">
@@ -25,7 +31,7 @@ function MaintenanceFees() {
                     <td>Charged For Sewing Machine Maintenance Over Time ---{'>'}</td>
                     <br/>
                     <td>
-                        $ <input className="Maint-Input" value={maintFees.SewingMachineMaintFee} onChange={(e) => setMaintFees({ ...maintFees, SewingMachineMaintFee: e.target.value })} id='SewingMachineMaintFee' />
+                        <input className="Maint-Input" value={maintFees.SewingMachineMaintFee} onChange={(e) => setMaintFees({ ...maintFees, SewingMachineMaintFee: Number(e.target.value) })} id='SewingMachineMaintFee' />
                     </td>
                     <td>Sewing Machine Fee</td>
                 </tr>
@@ -36,7 +42,7 @@ function MaintenanceFees() {
                     <td>Charged For Cleanup and Disposal of Scrap Materials ---{'>'}</td>
                     <br/>
                     <td>
-                        $ <input className="Maint-Input" value={maintFees.ShopMaintUtilFee} onChange={(e) => setMaintFees({ ...maintFees, ShopMaintUtilFee: e.target.value })} id='ShopMaintUtilFee' />
+                        <input className="Maint-Input" value={maintFees.ShopMaintUtilFee} onChange={(e) => setMaintFees({ ...maintFees, ShopMaintUtilFee: Number(e.target.value) })} id='ShopMaintUtilFee' />
                     </td>
                     <td>Shop Maintenance & Util. Fee</td>
                 </tr>

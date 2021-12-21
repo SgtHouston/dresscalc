@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Table } from 'react-bootstrap'
 import '../componentcss/LaborHours.css'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { actionSetLaborHours } from '../redux/action/laborhours'
 
 function LaborHours() {
     
-    const [laborHours, setLaborHours] = useState({
-        SewingHrs : 10,
-        PatternHrs : 1,
-        CuttingHrs : 1,
-        AppliqueHrs : 0,
-        SewingPriceHr: 65,
-        PatternPriceHr : 50,
-        CutttingPriceHr : 20,
-        AppliquePriceHr : 75
-    })
+    const laborHours = useSelector (state => state.laborhours)
+    const dispatch = useDispatch()
+    
+    function setLaborHours(laborHours) {
+        dispatch(actionSetLaborHours(laborHours))
+    }
 
     return (
         <Table className="table">
@@ -32,11 +31,11 @@ function LaborHours() {
                     <td>How Many Hours Of Sewing Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.SewingHrs} onChange={(e) => setLaborHours({ ...laborHours, SewingHrs: e.target.value })} id='SewingHours' /> HRS
+                        <input className="Labor-Input" value={laborHours.SewingHrs} onChange={(e) => setLaborHours({ ...laborHours, SewingHrs: Number(e.target.value) })} id='SewingHours' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.SewingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: e.target.value })} id='SewingPriceHr' /> /HR
+                        <input className="Labor-Input" value={laborHours.SewingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: Number(e.target.value) })} id='SewingPriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
@@ -46,11 +45,11 @@ function LaborHours() {
                     <td>How Many Hours Of Pattern-Making Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.PatternHrs} onChange={(e) => setLaborHours({ ...laborHours, PatternHrs: e.target.value })} id='PatternHrs' /> HRS
+                        <input className="Labor-Input" value={laborHours.PatternHrs} onChange={(e) => setLaborHours({ ...laborHours, PatternHrs: Number(e.target.value) })} id='PatternHrs' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.PatternPriceHr} onChange={(e) => setLaborHours({ ...laborHours, SewingPriceHr: e.target.value })} id='SewingPriceHr' /> /HR
+                        <input className="Labor-Input" value={laborHours.PatternPriceHr} onChange={(e) => setLaborHours({ ...laborHours, PatternPriceHr: Number(e.target.value) })} id='SewingPriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
@@ -60,11 +59,11 @@ function LaborHours() {
                     <td>How Many Hours Of Cutting Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.CuttingHrs} onChange={(e) => setLaborHours({ ...laborHours, CuttingHrs: e.target.value })} id='CuttingHrs' /> HRS
+                        <input className="Labor-Input" value={laborHours.CuttingHrs} onChange={(e) => setLaborHours({ ...laborHours, CuttingHrs: Number(e.target.value) })} id='CuttingHrs' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.CutttingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, CutttingPriceHr: e.target.value })} id='CutttingPriceHr' /> /HR
+                        <input className="Labor-Input" value={laborHours.CuttingPriceHr} onChange={(e) => setLaborHours({ ...laborHours, CuttingPriceHr: Number(e.target.value) })} id='CuttingPriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
@@ -74,11 +73,11 @@ function LaborHours() {
                     <td>How Many Hours Of Applique/Detail Work Will It Take To Create This Garment?</td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.AppliqueHrs} onChange={(e) => setLaborHours({ ...laborHours, AppliqueHrs: e.target.value })} id='AppliqueHrs' /> HRS
+                        <input className="Labor-Input" value={laborHours.AppliqueHrs} onChange={(e) => setLaborHours({ ...laborHours, AppliqueHrs: Number(e.target.value) })} id='AppliqueHrs' /> HRS
                     </td>
                     <br/>
                     <td>
-                        <input className="Labor-Input" value={laborHours.AppliquePriceHr} onChange={(e) => setLaborHours({ ...laborHours, AppliquePriceHr: e.target.value })} id='AppliquePriceHr' /> /HR
+                        <input className="Labor-Input" value={laborHours.AppliquePriceHr} onChange={(e) => setLaborHours({ ...laborHours, AppliquePriceHr: Number(e.target.value) })} id='AppliquePriceHr' /> /HR
                     </td>
                 </tr>
             </tbody>
