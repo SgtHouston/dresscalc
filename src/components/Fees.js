@@ -1,20 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Table } from 'react-bootstrap'
 import '../componentcss/Fees.css'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { actionSetFees } from '../redux/action/fees'
+
 
 
 function Fees() {
-    const [fees, setFees] = useState({
-        StateTax : 0.04,
-        Processing : 0.029
-    })
+    
+    // Select fees object from global state
+    const fees = useSelector (state => state.fees)
+    const dispatch = useDispatch()
+    
+    function setFees(fees) {
+        dispatch(actionSetFees(fees))
+    }
 
     return (
         <Table className="table">
             <thead>
                 <tr>
                     <th className="tableheader">YOU CAN READ AN EXPLANATION FOR EACH LINE BELOW</th>
-                    <br/>
+                    <br />
                     <th className="tableheader">FEES</th>
                 </tr>
             </thead>
@@ -22,9 +30,9 @@ function Fees() {
             <tbody >
                 <tr>
                     <td>How Much Is State Tax? ---{'>'}</td>
-                    <br/>
+                    <br />
                     <td>
-                        <input className="Fees-Input" value={fees.StateTax} onChange={(e) => setFees({ ...fees, StateTax: e.target.value })} id='StateTax' />
+                        <input className="Fees-Input" value={fees.StateTax} onChange={(e) => setFees({ ...fees, StateTax: (Number(e.target.value)) })} id='StateTax' />
                     </td>
                     <td>Georgia State Tax</td>
                 </tr>
@@ -33,9 +41,9 @@ function Fees() {
             <tbody >
                 <tr>
                     <td>How Much Is The Square Processing Fee? ---{'>'}</td>
-                    <br/>
+                    <br />
                     <td>
-                        <input className="Fees-Input" value={fees.Processing} onChange={(e) => setFees({ ...fees, Processing: e.target.value })} id='Processing' />
+                        <input className="Fees-Input" value={fees.Processing} onChange={(e) => setFees({ ...fees, Processing: (Number(e.target.value)) })} id='Processing' />
                     </td>
                     <td>Square Processing Fee</td>
                 </tr>
