@@ -34,7 +34,7 @@ function Fees() {
                     <td>
                         <input className="Fees-Input" value={fees.StateTax} onChange={(e) => setFees({ ...fees, StateTax: (Number(e.target.value)) })} id='StateTax' />
                     </td>
-                    <td>Georgia State Tax</td>
+                    <td>State Tax</td>
                 </tr>
             </tbody>
 

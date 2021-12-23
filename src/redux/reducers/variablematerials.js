@@ -1,10 +1,10 @@
 import { SET_VARMATERIALS } from "../action/variablematerials"
 
 export function variablematerials (state = {
-    MainFabricPPY: 0,
-    NumMainYds: 0,
-    LiningFabricPPY: 0,
-    NumLiningYds: 0,
+    MainFabricPPY: 10,
+    NumMainYds: 6,
+    LiningFabricPPY: 5,
+    NumLiningYds: 6,
     SpecialtyFabricPPY: 0,
     NumSpecYds: 0,
     CrystalPPPkg: 0,
@@ -15,8 +15,8 @@ export function variablematerials (state = {
     NumLaceBeadRhineApp: 0,
     ZipperButtonHook: 8,
     NumZipperButtonHook: 1,
-    Horsehair: 0,
-    NumHorsehair: 0,
+    Horsehair: 20,
+    NumHorsehair: 1,
     Thread: 3.00,
     NumThread: 1,
     Embellishment1: 0,
