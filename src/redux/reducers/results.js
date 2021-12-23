@@ -7,7 +7,7 @@ export function results (state = {
 }, action) {
     switch(action.type) {
         case SET_RESULTS:
-            return action.object
+            return {...state, state: action.object}
 
         default:
             return state

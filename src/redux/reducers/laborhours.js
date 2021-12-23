@@ -1,9 +1,9 @@
 import { SET_LABORHOURS } from "../action/laborhours";
 
 export function laborhours (state = {
-    SewingHrs : 0,
-    PatternHrs : 0,
-    CuttingHrs : 0,
+    SewingHrs : 10,
+    PatternHrs : 1,
+    CuttingHrs : 1,
     AppliqueHrs : 0,
     SewingPriceHr: 65,
     PatternPriceHr : 50,

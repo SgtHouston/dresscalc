@@ -12,23 +12,18 @@ import { actionSetResults } from '../redux/action/results'
 
 function Home() {
 
-    const laborHours = useSelector (state => state.laborhours)
-    const variableMaterials = useSelector (state => state.variablematerials)
-    const packaging =  useSelector(state => state.packaging)
-    const maintenancefees = useSelector (state => state.maintenancefees)
-    const results = useSelector (state => state.results)
-    const dispatch = useDispatch()
-
-    function handleSubmit(event) {
+    const handleSubmit = event => {
+        // on submit, capture info in fields
         event.preventDefault()
         
+        // calculate labor costs
         const totalLabor = (
             (laborHours.SewingHrs * laborHours.SewingPriceHr ) + 
             (laborHours.PatternHrs * laborHours.PatternPriceHr) + 
             (laborHours.CuttingHrs * laborHours.CuttingPriceHr) + 
             (laborHours.AppliqueHrs * laborHours.AppliquePriceHr)
         )
-
+        // calculate materials costs
         const totalMaterials = (
             (variableMaterials.MainFabricPPY * variableMaterials.NumMainYds) + 
             (variableMaterials.LiningFabricPPY  * variableMaterials.NumLiningYds) + 
@@ -45,16 +40,40 @@ function Home() {
             (variableMaterials.HangTag * variableMaterials.NumHangTag) +
             (packaging.GarmentBags + packaging.TagsPinsBoxes)
         )
-
+        // calculate maintenance fees
         const totalMaintenanceFees = (
             (maintenancefees.SewingMachineMaintFee + maintenancefees.ShopMaintUtilFee)
         )
+        // Take each result and dispatch to redux for global state
         results.totalMaterials = totalMaterials
         results.totalMaintenanceFees = totalMaintenanceFees
         results.totalLabor = totalLabor
-
         dispatch(actionSetResults(results))
+
+        // check to ensure correct numbers were dispatched
+        console.log("Results", results)
+        console.log("total labor costs", results.totalLabor)
+        
+        
     }
+
+
+
+    const laborHours = useSelector (state => state.laborhours)
+    const variableMaterials = useSelector (state => state.variablematerials)
+    const packaging =  useSelector(state => state.packaging)
+    const maintenancefees = useSelector (state => state.maintenancefees)
+    const results = useSelector (state => state.results)
+    const fees = useSelector (state => state.fees)
+    const dispatch = useDispatch()
+    const multiplier = 1.9
+    const storeProm =  Number(((results.totalLabor + results.totalMaterials) * multiplier) + (results.totalMaintenanceFees) + ((fees.StateTax * (((results.totalLabor + results.totalMaterials) * multiplier) + (results.totalMaintenanceFees))) + (fees.Processing * ((fees.StateTax * ((results.totalLabor + results.totalMaterials) * multiplier) + (results.totalMaintenanceFees)))))).toFixed(2)
+    const storeBridal = Number(storeProm * 1.55).toFixed(2)
+    const retailProm = Number(storeProm / 2).toFixed(2)
+    const retailBridal = Number(storeBridal / 2).toFixed(2)
+    
+
+    
 
     return (
         <div className="CalcHome">
@@ -88,13 +107,13 @@ function Home() {
                     </div>
                     <div className="CalcColRight">
                         Right
-                        <p className="Labor">Total Labor Costs </p>
-                        <p className="Material">Total Material Costs </p>
-                        <p className="FeesTotal">Total Fees</p>
-                        <p className="WholesaleProm">Wholesale Price --- Prom Event</p>
-                        <p className="WholesaleBridal">Wholesale Price --- Bridal Event</p>
-                        <p className="RetailProm">Retail Price --- Prom Event</p>
-                        <p className="RetailBridal">Retail Price --- Bridal Event</p>
+                        <p className="Labor">Total Labor Costs: $ {results.totalLabor} </p>
+                        <p className="Material">Total Material Costs $ {results.totalMaterials} </p>
+                        <p className="FeesTotal">Total Fees $ {results.totalMaintenanceFees} </p>
+                        <p className="retailProm">Retail Price --- Prom Event $ {retailProm} </p>
+                        <p className="retailBridal">Retail Price --- Bridal Event $ {retailBridal} </p>
+                        <p className="storeProm">Store Price --- Prom Event: $ {storeProm} </p>
+                        <p className="storeBridal">Store Price --- Bridal Event $ {storeBridal} </p>
                     </div>
                 </div>
             </form>
