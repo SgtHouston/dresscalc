@@ -48,7 +48,7 @@ function VariableMaterials() {
                         <td># Yards Required</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Does The Lining Fabric Cost Per Yard? ---{'>'}</td>
@@ -70,7 +70,7 @@ function VariableMaterials() {
                         <td># Yards Required</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Does The Specialty Fabric Cost Per Yard? ---{'>'}</td>
@@ -92,7 +92,7 @@ function VariableMaterials() {
                         <td># Yards Required</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>What Is The Local Retail Price Of The Crystals Pkg? ---{'>'}</td>
@@ -114,7 +114,7 @@ function VariableMaterials() {
                         <td># Required</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Does The Lace/Bead/Rhinestone Trim Costs Per Pkg? ---{'>'}</td>
@@ -136,7 +136,7 @@ function VariableMaterials() {
                         <td># Required</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Do The Lace/Bead/Rhinestone Applique Costs Per Pkg? ---{'>'}</td>
@@ -158,7 +158,7 @@ function VariableMaterials() {
                         <td># Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Do The Zippers/Buttons/Fasteners/Hooks Cost Per Pkg? ---{'>'}</td>
@@ -180,7 +180,7 @@ function VariableMaterials() {
                         <td># Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
@@ -202,7 +202,7 @@ function VariableMaterials() {
                         <td># Pkgs Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
@@ -224,7 +224,7 @@ function VariableMaterials() {
                         <td># Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
@@ -246,7 +246,7 @@ function VariableMaterials() {
                         <td># Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
@@ -268,7 +268,7 @@ function VariableMaterials() {
                         <td># Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>
@@ -290,7 +290,7 @@ function VariableMaterials() {
                         <td># Req</td>
                     </tr>
                 </tbody>
-
+                <br/>
                 <tbody >
                     <tr>
                         <td>How Much Per Package At Retail? ---{'>'}</td>

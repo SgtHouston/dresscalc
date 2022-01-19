@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { actionSetResults } from '../redux/action/results'
 
+// Fix ability to accept decimals as input
+
 function Home() {
 
     const handleSubmit = event => {
@@ -49,12 +51,6 @@ function Home() {
         results.totalMaintenanceFees = totalMaintenanceFees
         results.totalLabor = totalLabor
         dispatch(actionSetResults(results))
-
-        // check to ensure correct numbers were dispatched
-        console.log("Results", results)
-        console.log("total labor costs", results.totalLabor)
-        
-        
     }
 
 
